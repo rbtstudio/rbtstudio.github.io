@@ -1,0 +1,3 @@
+html:before {
+	content: "This is a pseudo to the html tag";
+}
