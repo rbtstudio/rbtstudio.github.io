@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 
-html {height: 100%;background-color: #fafafa;position: relative;}
+html {height: 100%;background-color: #dedede;}
 html:before {
 	content: "So what can you do with pseudo elements?";
 	display: block;
@@ -23,9 +23,6 @@ html:before {
 html:after {
 	content: "Copyright \00a9  2014 Bitwise Industries. All rights reserved.";
 	display: block;
-	position: absolute;
-	bottom: 0;
-	left: 0;
 	width: 100%;
 	background-color: #1a1a1a;
 	color: #999;
@@ -37,8 +34,9 @@ html:after {
 
 body {
 	min-height: 250px;
-	margin: 1em auto;
+	margin: 5em auto;
 	width: 80%;
 	box-shadow: 0 0 1em 1px hsla(0, 0%, 0%, 1);
 	background-color: #fefefe;
+	padding: 2em;
 }
