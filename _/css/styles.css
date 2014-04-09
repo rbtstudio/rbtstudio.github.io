@@ -36,7 +36,7 @@ body {
 	min-height: 250px;
 	margin: 5em auto;
 	width: 80%;
-	box-shadow: 0 0 1em 1px hsla(0, 0%, 0%, 1);
+	box-shadow: 0 0 1em 1px hsla(0, 0%, 0%, .5);
 	background-color: #fefefe;
 	padding: 2em;
 }
