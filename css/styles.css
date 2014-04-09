@@ -39,4 +39,45 @@ body {
 	box-shadow: 0 0 1em 1px hsla(0, 0%, 0%, .5);
 	background-color: #fefefe;
 	padding: 2em;
+	background-image: url("../images/mail.png");
+	background-repeat: repeat-x;
 }
+body:before {
+	content: "All of the contents of this demonstration page have been created using a total of three HTML div tags.";
+	display: block;
+	padding: 1em;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	color: #4a4a4a;
+	transition: width 1000ms ease-out;
+}
+
+@media screen and (max-width: 480px){
+	body:before {
+		width: 100%;
+	}
+}
+@media screen and (min-width: 480px){
+	body:before {
+		width: 100%;
+	}
+}
+@media screen and (min-width: 767px){
+	body:before {
+		width: 50%;
+	}
+}
+@media screen and (min-width: 767px){
+	body:before {
+		width: 50%;
+	}
+}
+
+
+
+
+
+
+
+
+
