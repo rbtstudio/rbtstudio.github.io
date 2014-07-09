@@ -20,12 +20,21 @@ h1 {
     }
 }
 
-@media (max-width: 350px){
+@media (max-width: 568px){
     body {
         background-color: yellow;
     }
     h1 {
         font-size: 20px;
         color: green;
+    }
+}
+@media (max-width: 320px){
+    body {
+        background-color: purple;
+    }
+    h1 {
+        font-size: 30px;
+        color: pink;
     }
 }
