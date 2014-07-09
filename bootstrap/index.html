@@ -20,6 +20,23 @@
 
 <div class="row">
 <div class="col-sm-6">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+        <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+        <li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+        <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="home">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit sequi ipsum, commodi veritatis eius atque quidem ab, voluptate sunt adipisci dolorem sapiente, recusandae earum? Accusamus amet suscipit explicabo, dolorem tempore.</div>
+        <div class="tab-pane" id="profile">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos reprehenderit at alias obcaecati, sed quaerat rem est sint excepturi, ratione inventore nihil quibusdam pariatur adipisci et nemo quam nulla asperiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus nemo officiis aliquam dignissimos, laborum esse, minima delectus maxime error rem asperiores, qui voluptates. Rem doloribus ratione voluptates suscipit rerum labore?</div>
+        <div class="tab-pane" id="messages">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorum ullam nobis ab ipsam quisquam non quam doloribus quo expedita, repellat saepe at assumenda quaerat, optio sapiente amet fuga debitis.</div>
+        <div class="tab-pane" id="settings">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa optio reiciendis, distinctio omnis animi repellendus facere soluta laboriosam, incidunt ab, ducimus vitae ad voluptate, perspiciatis ea maiores quibusdam sint nobis!</div>
+    </div>
+
+
 
     <form role="form">
         <div class="form-group">
@@ -52,9 +69,27 @@
 </div>
 </div>
 
+<a class="tooltipexample" href="#" data-toggle="tooltip" data-placement="top" title="non directing link">link</a>
+
 
 
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("a.tooltipexample").tooltip();
+
+        // $('#myTab a').click(function (e) {
+        //     e.preventDefault()
+        //     $(this).tab('show')
+        // });
+    });
+    </script>
+
+
+
+
+
+
 </body>
 </html>
