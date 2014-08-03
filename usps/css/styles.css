@@ -72,15 +72,16 @@ BOOTSTRAP NAVIGATION OVERRIDE STYLES
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-	color: #dddddd;
-	background-color: rgba(37, 112, 191, 0.5);
+	color: #efefef;
+	background-color: rgba(37, 112, 191, 0.25);
 }
+/*--- DROPDOWN ---*/
 .dropdown-menu {
 	background-color: rgb(193, 230, 252);
 	border-color: rgba(37, 112, 191, 0.5);
 }
 .dropdown-menu > li > a {
-	color: rgba(37, 112, 191, .5);
+	color: rgba(37, 112, 191, 0.5);
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
@@ -94,7 +95,7 @@ BOOTSTRAP NAVIGATION OVERRIDE STYLES
 .navbar-default .navbar-form {
 	border-color: rgba(37, 112, 191, 0.25);
 }
-
+/*--- TOGGLE ---*/
 .navbar-toggle {
 	border: none;
 }
@@ -228,6 +229,13 @@ footer {
 MEDIA QUERIES
 ------------------------------------*/
 @media screen and (max-width: 768px){
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color: rgba(37, 112, 191, 0.5);
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: rgba(37, 112, 191, 1);
+	}
 	#hero {
 		height: 120px;
 	}
