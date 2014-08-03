@@ -1,4 +1,12 @@
+/* ----------------------------------
+GLOBAL STYLES
+------------------------------------*/
+html, body {
+	height: 100%;
+	background-color: #303030;
+}
 body {
+    font-size: 100%;
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -11,56 +19,114 @@ body {
     width: 80%;
     margin: 0 auto;
 }
+
+
+/* ----------------------------------
+HEADER STYLES
+------------------------------------*/
 header {
-    background-color: #c1e6fc;
-}
-header img {
-    width: 250px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    background-color: rgb(193, 230, 252);
+    position: relative;
 }
 header ul {
     padding: 0;
     margin: 0;
 }
-/*header li {
-    display: inline-block;
-    width: 25%;
-    float: left;
-    text-align: center;
-}*/
 
+
+/* ----------------------------------
+BOOTSTRAP NAVIGATION OVERRIDE STYLES
+------------------------------------*/
+.navbar {
+    border-radius: 0px;
+    margin-bottom: 0px;
+	border-width: 0 0 1px;
+	border-style: solid;
+	border-color: rgba(37, 112, 191, 0.5);
+}
 .navbar-default {
     background-color: transparent;
     border-color: transparent;
 }
-.navbar {
-    border-radius: 0px;
-    margin-bottom: 0px;
+.navbar-default .navbar-brand {
+	width: 205px;
+	color: #777;
+	background-image: url("../img/logo.png");
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position: center;
+	text-indent: -9999px;
 }
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-    color: #fff;
-    background-color: transparent;
-}
-
-header li a {
-    color: rgba(82, 160, 231, .5);
-    line-height: 2.5;
+.navbar-default .navbar-nav > li > a {
+    color: rgba(37, 112, 191, 0.5);
     font-size: 150%;
     font-weight: 200;
     text-decoration: none;
     transition: all 150ms ease-in-out;
 }
-header li a:hover {
-    color: rgb(82, 160, 231);
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	color: rgba(37, 112, 191, 1);
+    background-color: transparent;
 }
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+	color: #dddddd;
+	background-color: rgba(37, 112, 191, 0.5);
+}
+.dropdown-menu {
+	background-color: rgb(193, 230, 252);
+	border-color: rgba(37, 112, 191, 0.5);
+}
+.dropdown-menu > li > a {
+	color: rgba(37, 112, 191, .5);
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+	color: rgba(37, 112, 191, 1);
+	background-color: transparent;
+}
+.dropdown-menu .divider {
+	background-color: rgba(37, 112, 191, 0.25);
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+	border-color: rgba(37, 112, 191, 0.25);
+}
+
+.navbar-toggle {
+	border: none;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+	background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: rgba(37, 112, 191, 0.5);
+	transition: background-color 150ms ease-in-out;
+}
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+	background-color: rgba(37, 112, 191, 1);
+}
+
+
+/* ----------------------------------
+HERO STYLES
+------------------------------------*/
 #hero {
-    height: 250px;
+    height: 180px;
     background-image: url("../img/sky.jpg");
     background-attachment: fixed;
     background-size: 100%;
+	transition: height 150ms ease-in-out;
 }
+
+
+/* ----------------------------------
+ARTICLE STYLES
+------------------------------------*/
 main {
     background-color: #eaeaea;
     padding-bottom: 50px;`
@@ -68,6 +134,11 @@ main {
 main .container {
     position: relative;
 }
+
+
+/* ----------------------------------
+MAIN IMG STYLES
+------------------------------------*/
 main img {
     display: block;
     width: 20%;
@@ -76,12 +147,20 @@ main img {
     position: absolute;
     top: 20px;
     left: 7%;
-    border: 5px solid #dddddd;
-     transition: left 150ms ease-in-out;
+    border: 1px solid #aaaaaa;
+	padding: 5px;
+	background-color: #cccccc;
+	transition: left 150ms ease-in-out;
+	
 }
 main img:hover {
-    left: 0;
+    left: 2%;
 }
+
+
+/* ----------------------------------
+ARTICLE STYLES
+------------------------------------*/
 main article {
     width: 80%;
     padding: 0 25px 25px;
@@ -89,6 +168,8 @@ main article {
     position: relative;
     z-index: 1;
     background-color: #ffffff;
+	border: 1px solid #dddddd;
+	transition: width 150ms ease-in-out;
 }
 main article:before {
     content: "";
@@ -101,37 +182,59 @@ main article:before {
     left: 0;
     background-image: url("../img/mail.png");
     background-repeat: repeat-x;
-}
-article h1 {
-    font-size: 40px;
-    font-weight: 200;
-}
-article p {
-    font-size: 24px;
-    line-height: 1.5;
-}
-article h2 {
-    font-size: 32px;
-    font-family: 'Homemade Apple', cursive;
-    float: right;
+	border-width: 1px 1px 0;
+	border-color: #dddddd;
+	border-style: solid;
 }
 article h2:before {
     content: "- ";
 }
 
 
+/* ----------------------------------
+ARTICLE FONT SIZING
+------------------------------------*/
+article h1 {
+	margin-top: 0;
+    /*font-size: 40px;*/
+    font-size: 2.5em;
+    font-weight: 200;
+}
+article p {
+    /*font-size: 24px;*/
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+article h2 {
+    /*font-size: 32px;*/
+    font-size: 2em;
+    font-family: 'Homemade Apple', cursive;
+    float: right;
+}
 
 
+/* ----------------------------------
+FOOTER STYLES
+------------------------------------*/
 footer {
     padding: 25px 0;
     background-color: #303030;
     color: #dddddd;
+	border-top: 1px solid #1a1a1a;
 }
 
 
-
-
-
-
-
-
+/* ----------------------------------
+MEDIA QUERIES
+------------------------------------*/
+@media screen and (max-width: 768px){
+	#hero {
+		height: 120px;
+	}
+	main article {
+		width: 100%;
+	}
+	main img {
+		display: none;
+	}
+}
