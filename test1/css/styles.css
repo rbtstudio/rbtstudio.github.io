@@ -1,0 +1,120 @@
+/* BASIC RESET */
+html, body, * {margin: 0;padding: 0;font-size: 1.5rem;font-family: "Helvetica Neue", Arial, sans-serif;font-weight: 200;}
+
+/* BORDER BOX SIZING */
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* FLEXBOX */
+header, article, aside, div.feature, footer {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	
+	border-width: 1px;
+	border-style: solid;
+}
+
+
+
+
+
+
+
+
+/* DEFINE BLOCK HEIGHTS */
+header {height: 75px;background-color: #ccc;border-color: #aaa;}
+article {height: 200px;background-color: #88d988;border-color: #6ca56c;}
+aside {height: 800px;background-color: #9898eb;border-color: #7171ac;}
+div.feature {height: 100px;background-color: #d896a4;border-color: #b26d78;}
+footer {height: 50px;background-color: #333;color:#fff;border-color: #272626;}
+
+/* CLEAR FLOATS */
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+article {
+	width: 60%;
+	float: left;
+}
+aside {
+	width: 40%;
+	float: right;
+}
+div.feature {
+	width: 25%;
+	float: left;
+}
+
+
+@media (max-width: 1200px){
+	article {
+		float: right;
+	}
+	aside {
+		float: left;
+	}
+	div.feature {
+		width: 50%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px){
+	body {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	header, article, aside, div.feature, footer {width: 100%;}
+	
+	header {-webkit-box-ordinal-group: 2;-webkit-order: 1;-ms-flex-order: 1;order: 1;}
+	main.clearfix {
+		-webkit-box-ordinal-group: 4;
+		-webkit-order: 3;
+		-ms-flex-order: 3;
+		order: 3;
+	}
+	div.clearfix {
+		-webkit-box-ordinal-group: 1;
+		-webkit-order: 0;
+		-ms-flex-order: 0;
+		order: 0;
+	}
+	footer {-webkit-box-ordinal-group: 3;-webkit-order: 2;-ms-flex-order: 2;order: 2;}
+}

@@ -1,0 +1,111 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: row;
+		font-family: "Helvetica Neue", Arial, sans-serif;
+		font-weight: 200;
+}
+h1, h2, h3, h4, h5, h6 {font-weight: 200;margin: 0;}
+ul, ol {margin: 0;padding: 0;}
+
+
+
+
+aside {
+	flex: 1;
+	background-color: #ce7c7c;
+	overflow: auto;
+}
+#track-select ul {
+	background-color: #2a2a2a;
+}
+#track-select li {
+	display:flex;
+		padding: 10px;
+		font-size: 50%;
+		color: #fefefe;
+		text-shadow: 1px 1px 1px #000000;
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+		border-bottom: 1px solid #000000;
+}
+#track-select img {
+	flex: none;
+	align-self: flex-start;
+		width: 64px;
+		height: 64px;
+		margin-right: 10px;
+		border: 1px solid hsla(0, 0%, 100%, 0.5);
+}
+#track-select .track-meta {
+	flex: 8;
+}
+#track-select .track-mini-control {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+		font-size: 200%;
+		text-align: center;
+}
+#track-select .track-mini-control i {
+	flex: none;
+}
+#track-select .track-mini-control i:last-child {
+	margin-top: auto;
+}
+
+
+
+
+
+article {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+		background-color: #b2b2f4;
+}
+#track-display {
+	flex: 4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+		background-color: #1a1a1a;
+		color: #fefefe;
+}
+
+
+#track-display .cover {
+	flex: 8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#track-display img {
+		 max-width: 80%;
+		 box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.5);
+		 border: 1px solid rgba(255, 255, 255, 0.5);
+}
+#track-display h1, #track-display h2 {
+	flex: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+#track-controls {
+	flex: 1;
+	background-color: pink;
+}
