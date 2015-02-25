@@ -1,248 +1,280 @@
-/* ----------------------------------
-GLOBAL STYLES
-------------------------------------*/
-html, body {
-	height: 100%;
-	background-color: #303030;
+/* -------------------------------
+    Browser Reset
+--------------------------------- */
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
 }
 body {
-    font-size: 100%;
-    margin: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1;
 }
-.clearfix:before, .clearfix:after {
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote::before, blockquote::after,
+q::before, q::after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* -------------------------------
+    Custom Styles
+--------------------------------- */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.clearfix::before,
+.clearfix::after {
     content: "";
     display: block;
     clear: both;
 }
-.container {
-    width: 80%;
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 200;
+    line-height: 1.2;
+}
+header {
+    background-color: hsl(202, 91%, 87%);
+    padding-top: 10px;
+}
+header img {
+    display: block;
+    width: 200px;
+    margin: 0px auto 10px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px;
+}
+header li {
+    display: inline-block;
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding: 10px 20px;
+}
+header li a {
+    display: block;
+    position: relative;
+    padding: 10px 0;
+    background-color: hsl(203, 94%, 80%);
+    border: 1px solid hsl(203, 94%, 70%);
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    transition: background-color 250ms ease-in-out, border 500ms ease-in-out;
+    overflow: hidden;
+}
+header li a:hover {
+    background-color: hsl(203, 94%, 75%);
+    border: 1px solid hsl(203, 94%, 65%);
+}
+
+
+/*
+header li a {
+    font-family: sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    background-color: hsl(203, 94%, 80%);
+    border-width: 1px;
+    border-style: solid;
+    border-color: hsl(203, 94%, 70%);
+    color: hsl(0, 100%, 100%);
+    font-size: .65rem;
+    border-radius: .25rem;
+    padding: 0.25rem 1rem;
+    position: relative;
+    overflow: hidden;
+    line-height: 2;
+    text-transform: uppercase;
+    display: block;
     margin: 0 auto;
 }
+*/
 
-
-/* ----------------------------------
-HEADER STYLES
-------------------------------------*/
-header {
-    background-color: rgb(193, 230, 252);
-    position: relative;
-}
-header ul {
-    padding: 0;
-    margin: 0;
-}
-
-
-/* ----------------------------------
-BOOTSTRAP NAVIGATION OVERRIDE STYLES
-------------------------------------*/
-.navbar {
-    border-radius: 0px;
-    margin-bottom: 0px;
-	border-width: 0 0 1px;
-	border-style: solid;
-	border-color: rgba(37, 112, 191, 0.5);
-}
-.navbar-default {
-    background-color: transparent;
-    border-color: transparent;
-}
-.navbar-default .navbar-brand {
-	width: 205px;
-	color: #777;
-	background-image: url("../img/logo.png");
-	background-repeat: no-repeat;
-	background-size: 80%;
-	background-position: center;
-	text-indent: -9999px;
-}
-.navbar-default .navbar-nav > li > a {
-    color: rgba(37, 112, 191, 0.5);
-    font-size: 150%;
-    font-weight: 200;
-    text-decoration: none;
-    transition: all 150ms ease-in-out;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-	color: rgba(37, 112, 191, 1);
-    background-color: transparent;
-}
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-	color: #efefef;
-	background-color: rgba(37, 112, 191, 0.25);
-}
-/*--- DROPDOWN ---*/
-.dropdown-menu {
-	background-color: rgb(193, 230, 252);
-	border-color: rgba(37, 112, 191, 0.5);
-}
-.dropdown-menu > li > a {
-	color: rgba(37, 112, 191, 0.5);
-}
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
-	color: rgba(37, 112, 191, 1);
-	background-color: transparent;
-}
-.dropdown-menu .divider {
-	background-color: rgba(37, 112, 191, 0.25);
-}
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-	border-color: rgba(37, 112, 191, 0.25);
-}
-/*--- TOGGLE ---*/
-.navbar-toggle {
-	border: none;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-	background-color: transparent;
-}
-.navbar-default .navbar-toggle .icon-bar {
-	background-color: rgba(37, 112, 191, 0.5);
-	transition: background-color 150ms ease-in-out;
-}
-.navbar-default .navbar-toggle:hover .icon-bar,
-.navbar-default .navbar-toggle:focus .icon-bar {
-	background-color: rgba(37, 112, 191, 1);
-}
-
-
-/* ----------------------------------
-HERO STYLES
-------------------------------------*/
-#hero {
-    height: 180px;
+.hero {
+    background-color: hsl(300, 91%, 87%);
+    height: 200px;
     background-image: url("../img/sky.jpg");
-    background-attachment: fixed;
-    background-size: 100%;
-	transition: height 150ms ease-in-out;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
-
-/* ----------------------------------
-ARTICLE STYLES
-------------------------------------*/
 main {
-    background-color: #eaeaea;
-    padding-bottom: 50px;`
-}
-main .container {
+    background-color: hsl(0, 0%, 92%);
     position: relative;
 }
-
-
-/* ----------------------------------
-MAIN IMG STYLES
-------------------------------------*/
 main img {
-    display: block;
-    width: 20%;
-    height: auto;
-    border-radius: 50%;
     position: absolute;
     top: 20px;
-    left: 7%;
-    border: 1px solid #aaaaaa;
-	padding: 5px;
-	background-color: #cccccc;
-	transition: left 150ms ease-in-out;
-	
+    left: 15%;
+    z-index: 0;
+    width: 25%;
+    border-radius: 50%;
+    transition: left 250ms ease-in-out;
 }
 main img:hover {
-    left: 2%;
+    left: 5%;
 }
-
-
-/* ----------------------------------
-ARTICLE STYLES
-------------------------------------*/
-main article {
-    width: 80%;
-    padding: 0 25px 25px;
-    float: right;
+article {
     position: relative;
     z-index: 1;
-    background-color: #ffffff;
-	border: 1px solid #dddddd;
-	transition: width 150ms ease-in-out;
+    width: 75%;
+    float: right;
+    background-color: #fff;
+    padding: 0 20px 40px;
+    margin-bottom: 60px;
+    margin-right: 5%;
 }
-main article:before {
+article::before {
     content: "";
     display: block;
+    background-color: hsl(0, 0%, 100%);
     width: 100%;
-    height: 75px;
-    background-color: #ffffff;
+    height: 100px;
     position: absolute;
-    top: -75px;
+    top: -100px;
     left: 0;
     background-image: url("../img/mail.png");
     background-repeat: repeat-x;
-	border-width: 1px 1px 0;
-	border-color: #dddddd;
-	border-style: solid;
 }
-article h2:before {
-    content: "- ";
+h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
 }
-
-
-/* ----------------------------------
-ARTICLE FONT SIZING
-------------------------------------*/
-article h1 {
-	margin-top: 0;
-    /*font-size: 40px;*/
-    font-size: 3em;
-    font-weight: 200;
+p {
+    font-size: 20px;
+    margin: 10px 0;
 }
-article p {
-    /*font-size: 24px;*/
-    font-size: 1.5em;
-    line-height: 1.5;
+h2 {
+    font-size: 30px;
+    margin: 20px 0;
+    text-align: right;
 }
-article h2 {
-    /*font-size: 32px;*/
-    font-size: 2em;
-    font-family: 'Homemade Apple', cursive;
-    float: right;
-}
-
-
-/* ----------------------------------
-FOOTER STYLES
-------------------------------------*/
 footer {
-    padding: 25px 0;
-    background-color: #303030;
-    color: #dddddd;
-	border-top: 1px solid #1a1a1a;
+    background-color: hsl(0, 0%, 19%);
+    padding: 20px;
+    color: white;
+}
+footer p {
+    font-size: 80%;
 }
 
 
-/* ----------------------------------
-MEDIA QUERIES
-------------------------------------*/
-@media screen and (max-width: 768px){
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-		color: rgba(37, 112, 191, 0.5);
-	}
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-		color: rgba(37, 112, 191, 1);
-	}
-	#hero {
-		height: 120px;
-	}
-	main article {
-		width: 100%;
-	}
-	main img {
-		display: none;
-	}
+@-webkit-keyframes sheen {
+    100% {
+        -webkit-transform: rotateZ(60deg) translate(1rem, -9rem);
+        transform: rotateZ(60deg) translate(1rem, -9rem);
+    }
 }
+@keyframes sheen {
+    100% {
+        -webkit-transform: rotateZ(60deg) translate(1rem, -9rem);
+        transform: rotateZ(60deg) translate(1rem, -9rem);
+    }
+}
+/* :: (double colon) for IE9+ and all other browsers. : (single colon) for legacy IE */
+.shiny:::after {
+    content: "";
+    position: absolute;
+    top: -75%;
+    right: -50%;
+    bottom: -75%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+    -webkit-transform: rotateZ(60deg) translate(-5rem, 7.5rem);
+    transform: rotateZ(60deg) translate(-5rem, 7.5rem);
+}
+.shiny:hover:::after,
+.shiny:focus:::after {
+    -webkit-animation: sheen 1s 0.25s forwards;
+    animation: sheen 1s 0.25s forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.shine::after {
+    content: "";
+    position :absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229,172,142, 0), rgba(255,255,255, 0.5), rgba(229,172,142, 0));
+    transform: rotateZ(60deg) translate(-5em, 9em);
+    -webkit-transform: rotateZ(60deg) translate(-5em, 9em);
+}
+
+.shine:hover::after, .shine:focus::after {
+    animation: sheen 1s forwards;
+    -webkit-animation: sheen 1s forwards;
+}
+
+@keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(1em, -5em);
+    }
+
+}
+@-webkit-keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(1em, -5em);
+    }
+
+}
+
+
+
+
+
+
+
